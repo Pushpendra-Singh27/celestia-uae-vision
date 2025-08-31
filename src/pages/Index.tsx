@@ -2,7 +2,9 @@ import React from 'react';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 import AnimatedNavigation from '@/components/AnimatedNavigation';
 import HeroSection from '@/components/HeroSection';
-import InvestmentProducts from '@/components/InvestmentProducts';
+import AboutSection from '@/components/AboutSection';
+import TeamSection from '@/components/TeamSection';
+import TestimonialSection from '@/components/TestimonialSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -18,8 +20,14 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection />
       
-      {/* Investment Products */}
-      <InvestmentProducts />
+      {/* About Section */}
+      <AboutSection />
+      
+      {/* Team Section */}
+      <TeamSection />
+      
+      {/* Testimonials Section */}
+      <TestimonialSection />
       
       {/* Contact Section */}
       <ContactSection />
