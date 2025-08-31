@@ -2,41 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Celestia Capitals - Luxury Investment Design System
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
+    /* Luxury Color Palette */
+    --background: 220 25% 3%;
+    --foreground: 42 87% 85%;
+    
+    --card: 220 25% 6%;
+    --card-foreground: 42 87% 85%;
+    
+    --popover: 220 25% 8%;
+    --popover-foreground: 42 87% 85%;
+    
+    /* Premium Gold Primary */
+    --primary: 42 87% 65%;
+    --primary-foreground: 220 25% 8%;
+    --primary-glow: 42 95% 75%;
+    
+    /* Deep Blue Secondary */
+    --secondary: 217 91% 15%;
+    --secondary-foreground: 42 87% 85%;
+    
+    /* Elegant Neutrals */
+    --muted: 220 25% 12%;
+    --muted-foreground: 217 15% 55%;
+    
+    --accent: 42 87% 65%;
+    --accent-foreground: 220 25% 8%;
+    
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
+    
+    --border: 220 25% 15%;
+    --input: 220 25% 15%;
+    --ring: 42 87% 65%;
+    
+    /* Luxury Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(42 87% 65%), hsl(42 95% 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 91% 15%), hsl(217 91% 25%));
+    --gradient-hero: linear-gradient(180deg, hsla(220, 25%, 3%, 0.95), hsla(220, 25%, 8%, 0.85));
+    --gradient-card: linear-gradient(145deg, hsla(220, 25%, 6%, 0.95), hsla(220, 25%, 12%, 0.8));
+    
+    /* Luxury Shadows */
+    --shadow-luxury: 0 25px 50px -12px hsla(42, 87%, 65%, 0.25);
+    --shadow-glow: 0 0 40px hsla(42, 95%, 75%, 0.4);
+    --shadow-card: 0 20px 40px -8px hsla(220, 25%, 0%, 0.6);
+    
+    /* Advanced Animations */
+    --transition-luxury: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -55,43 +76,90 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+  .light {
+    --background: 42 100% 98%;
+    --foreground: 220 25% 15%;
+    
+    --card: 42 100% 96%;
+    --card-foreground: 220 25% 15%;
+    
+    --popover: 42 100% 98%;
+    --popover-foreground: 220 25% 15%;
+    
+    --primary: 42 87% 55%;
+    --primary-foreground: 42 100% 98%;
+    --primary-glow: 42 95% 65%;
+    
+    --secondary: 217 91% 25%;
+    --secondary-foreground: 42 100% 98%;
+    
+    --muted: 42 50% 95%;
+    --muted-foreground: 220 15% 45%;
+    
+    --accent: 42 87% 55%;
+    --accent-foreground: 42 100% 98%;
+    
+    --border: 42 50% 88%;
+    --input: 42 50% 88%;
+    --ring: 42 87% 55%;
+    
+    --gradient-hero: linear-gradient(180deg, hsla(42, 100%, 98%, 0.95), hsla(42, 100%, 95%, 0.85));
+    --gradient-card: linear-gradient(145deg, hsla(42, 100%, 96%, 0.95), hsla(42, 50%, 92%, 0.8));
+    
+    --shadow-luxury: 0 25px 50px -12px hsla(42, 87%, 55%, 0.15);
+    --shadow-glow: 0 0 40px hsla(42, 95%, 65%, 0.2);
+    --shadow-card: 0 20px 40px -8px hsla(220, 25%, 20%, 0.15);
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 42 100% 96%;
+    --sidebar-foreground: 220 25% 25%;
+    --sidebar-primary: 42 87% 55%;
+    --sidebar-primary-foreground: 42 100% 98%;
+    --sidebar-accent: 42 50% 90%;
+    --sidebar-accent-foreground: 220 25% 25%;
+    --sidebar-border: 42 50% 85%;
+    --sidebar-ring: 42 87% 55%;
   }
+}
+
+/* Advanced Animation Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px hsla(42, 95%, 75%, 0.3); }
+  50% { box-shadow: 0 0 40px hsla(42, 95%, 75%, 0.6), 0 0 60px hsla(42, 95%, 75%, 0.3); }
+}
+
+@keyframes slide-up-fade {
+  0% { 
+    opacity: 0; 
+    transform: translateY(60px) scale(0.95); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+  }
+}
+
+@keyframes parallax-scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50px); }
+}
+
+@keyframes rotate-3d {
+  0% { transform: rotateY(0deg) rotateX(0deg); }
+  25% { transform: rotateY(90deg) rotateX(15deg); }
+  50% { transform: rotateY(180deg) rotateX(0deg); }
+  75% { transform: rotateY(270deg) rotateX(-15deg); }
+  100% { transform: rotateY(360deg) rotateX(0deg); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 @layer base {
@@ -99,7 +167,126 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-light;
+    overflow-x: hidden;
+  }
+
+  /* Luxury Scroll Bar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, hsl(var(--primary-glow)), hsl(var(--primary)));
+  }
+}
+
+@layer components {
+  /* Luxury Button Variants */
+  .btn-luxury {
+    @apply relative overflow-hidden bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-8 py-4 rounded-xl font-medium tracking-wide;
+    transition: var(--transition-luxury);
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  .btn-luxury:hover {
+    @apply scale-105;
+    box-shadow: var(--shadow-luxury), var(--shadow-glow);
+  }
+  
+  .btn-luxury::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%];
+    transition: transform 0.6s ease;
+  }
+  
+  .btn-luxury:hover::before {
+    @apply translate-x-[100%];
+    animation: shimmer 0.8s ease;
+  }
+
+  /* Glass Morphism Cards */
+  .glass-card {
+    background: linear-gradient(145deg, hsla(var(--card) / 0.15), hsla(var(--muted) / 0.1));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsla(var(--border) / 0.2);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-luxury);
+  }
+  
+  .glass-card:hover {
+    background: linear-gradient(145deg, hsla(var(--card) / 0.25), hsla(var(--muted) / 0.15));
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card), var(--shadow-glow);
+  }
+
+  /* Parallax Sections */
+  .parallax-section {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .parallax-bg {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    will-change: transform;
+  }
+
+  /* 3D Transform Elements */
+  .transform-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .rotate-y-6 {
+    transform: rotateY(6deg);
+  }
+  
+  .rotate-x-6 {
+    transform: rotateX(6deg);
+  }
+
+  /* Luxury Text Effects */
+  .text-glow {
+    text-shadow: 0 0 20px hsla(var(--primary) / 0.5);
+  }
+  
+  .text-luxury {
+    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
+  }
+
+  /* Animation Classes */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow-pulse {
+    animation: glow-pulse 4s ease-in-out infinite;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up-fade 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+  
+  .animate-rotate-3d {
+    animation: rotate-3d 20s linear infinite;
   }
 }
