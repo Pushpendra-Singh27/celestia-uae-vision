@@ -11,6 +11,7 @@ import Aviation from "./pages/services/Aviation";
 import RealEstate from "./pages/services/RealEstate";
 import Commodity from "./pages/services/Commodity";
 import NotFound from "./pages/NotFound";
+import Background from "./components/Background";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <Background />
+      <div className="relative z-10">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
@@ -32,6 +35,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      </div>
     </TooltipProvider>
   </QueryClientProvider>
 );

@@ -4,16 +4,31 @@ import Lenis from '@studio-freight/lenis';
 export const useSmoothScroll = () => {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.8,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      duration: 0,
+      easing: (t: number) => t, // Linear easing for instant scroll
+      smoothWheel: false,
+      touchMultiplier: 1.5,
+      infinite: false,
+      wheelMultiplier: 1.2,
+      gestureOrientation: 'vertical'
     });
 
-    function raf(time: number) {
+    let animationFrameId: number;
+    
+    const raf = (time: number) => {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      animationFrameId = requestAnimationFrame(raf);
+    };
+    
+    animationFrameId = requestAnimationFrame(raf);
+    
+    // Handle mobile devices
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobile) {
+      // On mobile, use native scroll for better performance
+      lenis.destroy();
+      return;
     }
-
-    requestAnimationFrame(raf);
 
     // Handle anchor links
     const handleAnchorClick = (e: Event) => {
@@ -31,6 +46,7 @@ export const useSmoothScroll = () => {
     document.addEventListener('click', handleAnchorClick);
 
     return () => {
+      cancelAnimationFrame(animationFrameId);
       lenis.destroy();
       document.removeEventListener('click', handleAnchorClick);
     };
