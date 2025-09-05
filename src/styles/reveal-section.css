@@ -1,0 +1,33 @@
+.hero-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.reveal-section {
+  position: relative;
+  z-index: 1;
+  margin-top: 100vh;
+  border-radius: 48px 48px 0 0;
+  transform-origin: top center;
+  background: var(--background);
+}
+
+.reveal-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, var(--background), transparent);
+}
+
+@media (max-width: 768px) {
+  .reveal-section {
+    border-radius: 32px 32px 0 0;
+  }
+}

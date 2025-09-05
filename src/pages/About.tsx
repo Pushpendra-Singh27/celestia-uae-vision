@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import AnimatedNavigation from '@/components/AnimatedNavigation';
 import Footer from '@/components/Footer';
+import { AnimatedImage3D } from '@/components/ui/AnimatedImage3D';
 
 const About = () => {
   return (
@@ -55,6 +56,29 @@ const About = () => {
                 commodities like gold and oil, we provide access to exclusive opportunities traditionally reserved 
                 for institutional investors.
               </p>
+            </div>
+          </motion.div>
+
+          {/* Team & Office Images Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
+          >
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <AnimatedImage3D
+                src="/images/pexels-fauxels-3184418.jpg"
+                alt="Our Team"
+                className="w-full h-[400px] object-cover rounded-lg"
+                revealDirection="left"
+              />
+              <AnimatedImage3D
+                src="/images/home/pexels-anna-nekrashevich-6801874.jpg"
+                alt="Our Office"
+                className="w-full h-[400px] object-cover rounded-lg"
+                revealDirection="right"
+              />
             </div>
           </motion.div>
 

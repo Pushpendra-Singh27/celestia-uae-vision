@@ -45,8 +45,12 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+          }}
+          viewport={{ once: true, margin: '-100px 0px' }}
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
@@ -81,8 +85,16 @@ const HeroSection = () => {
             <motion.div 
               key={stat.label}
               initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 + index * 0.1 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { 
+                  duration: 0.6, 
+                  delay: 0.2 + index * 0.1,
+                  ease: [0.16, 1, 0.3, 1]
+                }
+              }}
+              viewport={{ once: true, margin: '-50px' }}
               whileHover={{ y: -10 }}
               className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10"
             >

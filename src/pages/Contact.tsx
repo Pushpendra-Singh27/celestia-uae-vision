@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import AnimatedNavigation from '@/components/AnimatedNavigation';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import { AnimatedImage3D } from '@/components/ui/AnimatedImage3D';
 
 const Contact = () => {
   return (
@@ -24,6 +25,26 @@ const Contact = () => {
               Ready to start your investment journey? Get in touch with our expert advisors
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Office Images Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <AnimatedImage3D
+              src="/images/contact/office-reception.jpg" // Luxury office reception
+              alt="Our Office Reception"
+              className="w-full h-[500px]"
+              revealDirection="left"
+            />
+            <AnimatedImage3D
+              src="/images/contact/meeting-space.jpg" // Modern meeting room
+              alt="Meeting Space"
+              className="w-full h-[500px]"
+              revealDirection="right"
+            />
+          </div>
         </div>
       </section>
 

@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <!-- Immediately navigate to the index in the same directory so the SPA can handle routing -->
+    <meta http-equiv="refresh" content="0;URL=./" />
+    <title>Redirecting…</title>
+    <script>
+      // Fallback for browsers that don't handle meta refresh immediately:
+      try { location.replace('./'); } catch(e) {}
+    </script>
+  </head>
+  <body>
+    Redirecting…
+  </body>
+</html>
