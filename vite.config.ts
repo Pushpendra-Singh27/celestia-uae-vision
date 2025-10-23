@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production';
   
   return {
-    base: isProduction ? '/celestia-uae-vision/' : '/',
+    base: '/',
     plugins: [react()],
     resolve: {
       alias: {
