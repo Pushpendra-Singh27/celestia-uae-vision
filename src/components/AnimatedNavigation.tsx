@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import celestiaLogo from '@/assets/Celestia Capital Logo.png';
 
-const AnimatedNavigation = () => {
+interface AnimatedNavigationProps {
+  useWhiteText?: boolean;
+}
+
+const AnimatedNavigation = ({ useWhiteText = false }: AnimatedNavigationProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -69,9 +73,9 @@ const AnimatedNavigation = () => {
                 to={item.href}
                 className={cn(
                   "relative transition-all duration-300 font-medium group",
-                  isScrolled 
-                    ? "text-foreground hover:text-primary" 
-                    : "text-white hover:text-primary"
+                  useWhiteText && !isScrolled 
+                    ? "text-white hover:text-primary" 
+                    : "text-foreground hover:text-primary"
                 )}
               >
                 {item.name}
@@ -99,7 +103,7 @@ const AnimatedNavigation = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className={cn(
             "md:hidden p-2 transition-colors duration-300",
-            isScrolled ? "text-foreground" : "text-white"
+            useWhiteText && !isScrolled ? "text-white" : "text-foreground"
           )}
         >
           <div className="w-6 h-6 flex flex-col justify-center space-y-1">

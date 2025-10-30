@@ -15,7 +15,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Navigation */}
-      <AnimatedNavigation />
+      <AnimatedNavigation useWhiteText={true} />
       
       {/* Hero Section */}
       <HeroSection />

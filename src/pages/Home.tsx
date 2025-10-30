@@ -39,7 +39,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-grid-white/[0.02]" />
       </motion.div>
 
-      <AnimatedNavigation />
+      <AnimatedNavigation useWhiteText={true} />
 
       {/* Hero Content */}
       <motion.section
