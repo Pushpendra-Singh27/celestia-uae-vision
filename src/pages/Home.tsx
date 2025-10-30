@@ -61,7 +61,7 @@ const Home = () => {
           <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 px-4">
             Your Gateway to Premium Investment Opportunities
           </p>
-          <Link to="/services">
+          <Link to="/contact">
             <Button size="lg" className="btn-luxury">
               Explore Opportunities
             </Button>
@@ -95,7 +95,7 @@ const Home = () => {
                 <p className="text-lg text-muted-foreground mb-6">
                   We specialize in high-yield investment opportunities across Aviation, Real Estate, and Commodity sectors.
                 </p>
-                <Link to="/about">
+                <Link to="/contact">
                   <Button className="btn-luxury">Learn More</Button>
                 </Link>
               </motion.div>

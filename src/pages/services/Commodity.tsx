@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import AnimatedNavigation from '@/components/AnimatedNavigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -262,9 +263,11 @@ const Commodity = () => {
               Take advantage of the highest return potential in our portfolio with professional 
               commodity trading strategies and expert market analysis.
             </p>
-            <Button size="lg" className="btn-luxury px-12 py-4 text-lg">
-              Schedule Consultation
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="btn-luxury px-12 py-4 text-lg">
+                Schedule Consultation
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

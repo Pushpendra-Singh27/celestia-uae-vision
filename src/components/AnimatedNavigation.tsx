@@ -86,16 +86,18 @@ const AnimatedNavigation = ({ useWhiteText = false }: AnimatedNavigationProps) =
         </div>
 
         {/* CTA Button */}
-        <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="hidden md:block btn-luxury"
-        >
-          Invest Now
-        </motion.button>
+        <Link to="/contact">
+          <motion.button
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="hidden md:block btn-luxury"
+          >
+            Invest Now
+          </motion.button>
+        </Link>
 
         {/* Mobile Menu Button */}
         <motion.button
@@ -150,14 +152,17 @@ const AnimatedNavigation = ({ useWhiteText = false }: AnimatedNavigationProps) =
                   </Link>
                 </motion.div>
               ))}
-              <motion.button
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 0.4 }}
-                className="btn-luxury w-full mt-4"
-              >
-                Invest Now
-              </motion.button>
+              <Link to="/contact" className="block">
+                <motion.button
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: 0.4 }}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="btn-luxury w-full mt-4"
+                >
+                  Invest Now
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         )}

@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 import aviationImg from '@/assets/aviation-investment.jpg';
 import realEstateImg from '@/assets/real-estate-investment.jpg';
 import commodityImg from '@/assets/commodity-trading.jpg';
@@ -264,16 +265,18 @@ const ProductCard = ({ product, index, scrollProgress }: {
           </motion.div>
 
           {/* CTA Button */}
-          <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: product.delay + 0.8 }}
-            whileHover={{ scale: 1.05, y: -3 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-luxury w-full group relative overflow-hidden"
-          >
-            <span className="relative z-10">Schedule Consultation</span>
-          </motion.button>
+          <Link to="/contact">
+            <motion.button
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: product.delay + 0.8 }}
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-luxury w-full group relative overflow-hidden"
+            >
+              <span className="relative z-10">Schedule Consultation</span>
+            </motion.button>
+          </Link>
         </div>
       </div>
     </motion.div>

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import celestiaLogo from '@/assets/Celestia Capital Logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -47,15 +48,17 @@ const Footer = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="flex items-center space-x-3"
+              className="flex items-center"
             >
-              <div className="w-12 h-12 bg-gradient-luxury rounded-xl flex items-center justify-center">
-                <span className="text-2xl font-bold text-primary-foreground">C</span>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-luxury">CELESTIA</h3>
-                <p className="text-sm text-muted-foreground -mt-1">CAPITALS</p>
-              </div>
+              <img 
+                src={celestiaLogo} 
+                alt="Celestia Capital" 
+                className="h-16 w-auto object-contain"
+                style={{
+                  clipPath: 'inset(10% 15% 10% 15%)',
+                  transform: 'scale(1.8)'
+                }}
+              />
             </motion.div>
 
             <motion.p

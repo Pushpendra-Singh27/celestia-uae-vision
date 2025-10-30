@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import AnimatedNavigation from '@/components/AnimatedNavigation';
 import Footer from '@/components/Footer';
 import { AnimatedImage3D } from '@/components/ui/AnimatedImage3D';
@@ -260,13 +261,15 @@ const Insights = () => {
               Our expert team can help you navigate these investment sectors and find the right 
               opportunities that align with your financial goals and risk tolerance.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-luxury px-12 py-4 text-lg"
-            >
-              Schedule Consultation
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-luxury px-12 py-4 text-lg"
+              >
+                Schedule Consultation
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>

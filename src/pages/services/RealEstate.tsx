@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import AnimatedNavigation from '@/components/AnimatedNavigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -239,9 +240,11 @@ const RealEstate = () => {
               Take advantage of Dubai's booming real estate market with our expertly curated 
               property investment opportunities designed for maximum returns.
             </p>
-            <Button size="lg" className="btn-luxury px-12 py-4 text-lg">
-              Schedule Consultation
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="btn-luxury px-12 py-4 text-lg">
+                Schedule Consultation
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

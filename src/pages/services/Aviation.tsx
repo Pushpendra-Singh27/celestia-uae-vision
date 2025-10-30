@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import AnimatedNavigation from '@/components/AnimatedNavigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -202,9 +203,11 @@ const Aviation = () => {
               Join our exclusive aviation investment program and benefit from the high-growth potential 
               of the aviation sector with professional management and guaranteed returns.
             </p>
-            <Button size="lg" className="btn-luxury px-12 py-4 text-lg">
-              Schedule Consultation
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="btn-luxury px-12 py-4 text-lg">
+                Schedule Consultation
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

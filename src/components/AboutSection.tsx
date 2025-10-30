@@ -199,7 +199,7 @@ const AboutSection = () => {
                 className="flex flex-col sm:flex-row gap-4 pt-4"
               >
                 <Button 
-                  onClick={() => navigate('/about')}
+                  onClick={() => navigate('/contact')}
                   size="lg" 
                   className="btn-luxury px-8"
                 >
