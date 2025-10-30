@@ -47,7 +47,7 @@ const Commodity = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between border-b border-border pb-2">
                     <span className="font-semibold">Minimum Investment:</span>
-                    <span className="text-primary">AED 100,000</span>
+                    <span className="text-primary">AED 150K</span>
                   </div>
                   <div className="flex justify-between border-b border-border pb-2">
                     <span className="font-semibold">Minimum Period:</span>
@@ -105,28 +105,16 @@ const Commodity = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Highest Return Potential",
-                  description: "Commodity markets offer exceptional profit opportunities through strategic timing and market analysis."
+                  title: "Revenue Diversified Portfolio",
+                  description: "Diversify your revenue streams across multiple commodity sectors for enhanced stability and growth potential."
                 },
                 {
-                  title: "Inflation Hedge",
-                  description: "Commodities traditionally perform well during inflationary periods, protecting your purchasing power."
+                  title: "High Potential - High Risk High Value",
+                  description: "Access high-value investment opportunities with significant return potential, balanced with appropriate risk management."
                 },
                 {
-                  title: "Portfolio Diversification",
-                  description: "Add commodities to reduce overall portfolio risk and correlation with traditional assets."
-                },
-                {
-                  title: "Global Market Access",
-                  description: "Trade in international commodity exchanges with professional execution and timing."
-                },
-                {
-                  title: "Expert Analysis",
-                  description: "Benefit from our team's deep understanding of global supply chains and market dynamics."
-                },
-                {
-                  title: "Risk Management",
-                  description: "Advanced hedging strategies to protect against adverse market movements."
+                  title: "Professional Management - Professional Trading Strategist",
+                  description: "Benefit from expert trading strategists who manage your investments with professional market analysis and execution."
                 }
               ].map((benefit, index) => (
                 <motion.div

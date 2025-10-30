@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import celestiaLogo from '@/assets/Celestia Capital Logo.png';
 
 const AnimatedNavigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,15 +40,17 @@ const AnimatedNavigation = () => {
         <Link to="/">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-3"
+            className="flex items-center"
           >
-            <div className="w-10 h-10 bg-gradient-luxury rounded-xl flex items-center justify-center">
-              <span className="text-2xl font-bold text-primary-foreground">C</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-luxury">CELESTIA</h1>
-              <p className="text-xs text-muted-foreground -mt-1">CAPITALS</p>
-            </div>
+            <img 
+              src={celestiaLogo} 
+              alt="Celestia Capital" 
+              className="h-20 w-auto object-contain"
+              style={{
+                clipPath: 'inset(10% 15% 10% 15%)',
+                transform: 'scale(2.5)'
+              }}
+            />
           </motion.div>
         </Link>
 

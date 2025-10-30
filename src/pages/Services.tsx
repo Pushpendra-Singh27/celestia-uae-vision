@@ -20,8 +20,8 @@ const Services = () => {
       overlayImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80',
       description: 'Earn from aircraft leasing, aviation operations, and logistics infrastructure—an exclusive, fast-growing sector.',
       roi: 'Up to 28% ROI',
-      minInvestment: 'AED 200,000',
-      minPeriod: '2 years',
+      minInvestment: 'AED 12M',
+      minPeriod: '5 years',
       route: '/services/aviation'
     },
     {
@@ -31,7 +31,7 @@ const Services = () => {
       overlayImage: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80',
       description: 'Invest in premium commercial and residential properties with strong rental yields and capital appreciation.',
       roi: 'Up to 22% ROI',
-      minInvestment: 'AED 150,000',
+      minInvestment: 'AED 2M',
       minPeriod: '5 years',
       route: '/services/real-estate'
     },
@@ -42,7 +42,7 @@ const Services = () => {
       overlayImage: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80',
       description: 'Diversify with gold, oil, and high-demand global commodities. A powerful hedge against inflation and market volatility.',
       roi: 'Up to 36% ROI',
-      minInvestment: 'AED 100,000',
+      minInvestment: 'AED 150K',
       minPeriod: '1 year',
       route: '/services/commodity'
     }

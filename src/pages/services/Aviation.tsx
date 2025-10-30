@@ -47,11 +47,11 @@ const Aviation = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between border-b border-border pb-2">
                     <span className="font-semibold">Minimum Investment:</span>
-                    <span className="text-primary">AED 200,000</span>
+                    <span className="text-primary">AED 12M</span>
                   </div>
                   <div className="flex justify-between border-b border-border pb-2">
                     <span className="font-semibold">Minimum Period:</span>
-                    <span className="text-primary">2 years</span>
+                    <span className="text-primary">5 years</span>
                   </div>
                   <div className="flex justify-between border-b border-border pb-2">
                     <span className="font-semibold">Expected ROI:</span>
@@ -70,7 +70,7 @@ const Aviation = () => {
                   transition={{ duration: 0.8 }}
                   className="bg-gradient-card p-8 rounded-2xl shadow-luxury"
                 >
-                  <h3 className="text-2xl font-bold mb-4 text-center">Investment Highlights</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-center">Investment Strategy</h3>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
@@ -87,6 +87,14 @@ const Aviation = () => {
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
                       Maintenance and technical services
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      Investment as cash infusion
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      Equity through ownership of flight
                     </li>
                   </ul>
                 </motion.div>

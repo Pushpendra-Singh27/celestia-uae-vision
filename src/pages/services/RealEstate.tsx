@@ -47,7 +47,7 @@ const RealEstate = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between border-b border-border pb-2">
                     <span className="font-semibold">Minimum Investment:</span>
-                    <span className="text-primary">AED 150,000</span>
+                    <span className="text-primary">AED 12M</span>
                   </div>
                   <div className="flex justify-between border-b border-border pb-2">
                     <span className="font-semibold">Minimum Period:</span>
@@ -123,6 +123,18 @@ const RealEstate = () => {
                 {
                   title: "Liquidity Options",
                   description: "Exit strategies available through property sales or portfolio transfers."
+                },
+                {
+                  title: "Collateral Investment Structure",
+                  description: "Collateral investment from 50 to 70% of the investment value providing enhanced security."
+                },
+                {
+                  title: "Revenue Professional Management",
+                  description: "Professional revenue management ensuring optimal returns and cash flow optimization."
+                },
+                {
+                  title: "Dedicated Real-Estate Team",
+                  description: "Specialized real-estate team focused exclusively on maximizing your property investments."
                 }
               ].map((benefit, index) => (
                 <motion.div
