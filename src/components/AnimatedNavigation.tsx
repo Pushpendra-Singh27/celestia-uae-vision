@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 const AnimatedNavigation = () => {
@@ -35,34 +36,39 @@ const AnimatedNavigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="flex items-center space-x-3"
-        >
-          <div className="w-10 h-10 bg-gradient-luxury rounded-xl flex items-center justify-center">
-            <span className="text-2xl font-bold text-primary-foreground">C</span>
-          </div>
-          <div>
-            <h1 className="text-xl font-bold text-luxury">CELESTIA</h1>
-            <p className="text-xs text-muted-foreground -mt-1">CAPITALS</p>
-          </div>
-        </motion.div>
+        <Link to="/">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center space-x-3"
+          >
+            <div className="w-10 h-10 bg-gradient-luxury rounded-xl flex items-center justify-center">
+              <span className="text-2xl font-bold text-primary-foreground">C</span>
+            </div>
+            <div>
+              <h1 className="text-xl font-bold text-luxury">CELESTIA</h1>
+              <p className="text-xs text-muted-foreground -mt-1">CAPITALS</p>
+            </div>
+          </motion.div>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item, index) => (
-            <motion.a
+            <motion.div
               key={item.name}
-              href={item.href}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -3 }}
-              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium group"
             >
-              {item.name}
-              <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-luxury transition-all duration-300 group-hover:w-full" />
-            </motion.a>
+              <Link
+                to={item.href}
+                className="relative text-foreground hover:text-primary transition-all duration-300 font-medium group"
+              >
+                {item.name}
+                <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-luxury transition-all duration-300 group-hover:w-full" />
+              </Link>
+            </motion.div>
           ))}
         </div>
 
@@ -113,17 +119,20 @@ const AnimatedNavigation = () => {
           >
             <div className="px-6 py-4 space-y-4">
               {navItems.map((item, index) => (
-                <motion.a
+                <motion.div
                   key={item.name}
-                  href={item.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
                 >
-                  {item.name}
-                </motion.a>
+                  <Link
+                    to={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
               ))}
               <motion.button
                 initial={{ opacity: 0, x: -20 }}
