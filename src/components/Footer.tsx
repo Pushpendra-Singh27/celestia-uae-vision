@@ -119,39 +119,6 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Newsletter Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="glass-card p-8 rounded-2xl border border-primary/20 mb-12"
-        >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h4 className="text-2xl font-bold text-foreground mb-2">
-                Stay Updated
-              </h4>
-              <p className="text-muted-foreground">
-                Get the latest investment insights and market updates delivered to your inbox.
-              </p>
-            </div>
-            <div className="flex space-x-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-muted/30 border border-primary/20 rounded-xl focus:outline-none focus:border-primary transition-all duration-300 text-foreground"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-luxury px-8"
-              >
-                Subscribe
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

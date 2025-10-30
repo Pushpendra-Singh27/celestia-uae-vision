@@ -43,7 +43,7 @@ const Home = () => {
 
       {/* Hero Content */}
       <motion.section
-        className="relative min-h-screen flex items-center justify-center px-6"
+        className="relative min-h-screen flex items-center justify-center px-4 md:px-6 pt-20 md:pt-0"
         style={{ opacity: textOpacity }}
       >
         <motion.div
@@ -52,13 +52,13 @@ const Home = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-5xl mx-auto"
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 text-white leading-tight">
             Welcome to{' '}
             <span className="bg-gradient-luxury bg-clip-text text-transparent">
               Celestia Capital
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8">
+          <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 px-4">
             Your Gateway to Premium Investment Opportunities
           </p>
           <Link to="/services">
@@ -81,7 +81,7 @@ const Home = () => {
             marginRight: 'auto',
           }}
         />
-        <div className="px-6 py-20">
+        <div className="px-4 md:px-6 py-12 md:py-20">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
               <motion.div
