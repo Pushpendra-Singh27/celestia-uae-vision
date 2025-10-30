@@ -5,6 +5,8 @@ import AnimatedNavigation from '@/components/AnimatedNavigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { AnimatedImage3D } from '@/components/ui/AnimatedImage3D';
+import aviationImage from '@/assets/aviation-investment.jpg';
+import commodityImage from '@/assets/commodity-trading.jpg';
 
 const Services = () => {
   const navigate = useNavigate();
@@ -14,7 +16,7 @@ const Services = () => {
     {
       id: 'aviation',
       title: 'Aviation Investments',
-      image: 'https://images.unsplash.com/photo-1436491865333-4100abd7583a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80',
+      image: aviationImage,
       overlayImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80',
       description: 'Earn from aircraft leasing, aviation operations, and logistics infrastructure—an exclusive, fast-growing sector.',
       roi: 'Up to 28% ROI',
@@ -36,7 +38,7 @@ const Services = () => {
     {
       id: 'commodity',
       title: 'Commodity Trading',
-      image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a4a88af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80',
+      image: commodityImage,
       overlayImage: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80',
       description: 'Diversify with gold, oil, and high-demand global commodities. A powerful hedge against inflation and market volatility.',
       roi: 'Up to 36% ROI',

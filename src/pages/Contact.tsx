@@ -4,6 +4,8 @@ import AnimatedNavigation from '@/components/AnimatedNavigation';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import { AnimatedImage3D } from '@/components/ui/AnimatedImage3D';
+import businessMeetingImage from '@/assets/3d-rendering-business-meeting-working-room-office-building.jpg';
+import businessmanChartImage from '@/assets/businessman-explaining-chart.jpg';
 
 const Contact = () => {
   return (
@@ -33,13 +35,13 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedImage3D
-              src="/images/contact/office-reception.jpg" // Luxury office reception
+              src={businessMeetingImage}
               alt="Our Office Reception"
               className="w-full h-[500px]"
               revealDirection="left"
             />
             <AnimatedImage3D
-              src="/images/contact/meeting-space.jpg" // Modern meeting room
+              src={businessmanChartImage}
               alt="Meeting Space"
               className="w-full h-[500px]"
               revealDirection="right"
