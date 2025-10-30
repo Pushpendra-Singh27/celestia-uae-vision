@@ -14,10 +14,9 @@ const HeroSection = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
 
   const stats = [
-    { value: '28%', label: 'Max ROI' },
-    { value: '500M+', label: 'AED Managed' },
-    { value: '1000+', label: 'Investors' },
-    { value: '15+', label: 'Years Experience' }
+    { value: '100M+', label: 'AED Managed' },
+    { value: '250+', label: 'Investors' },
+    { value: '10+', label: 'Years Experience' }
   ];
 
   return (
@@ -80,7 +79,7 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 max-w-4xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div 
               key={stat.label}

@@ -24,13 +24,6 @@ const ContactSection = () => {
       phone: "+971 4 XXX XXXX",
       email: "invest@celestiacapitals.com",
       delay: 0
-    },
-    {
-      title: "Investment Hotline",
-      address: "24/7 Support Available",
-      phone: "+971 50 XXX XXXX",
-      email: "support@celestiacapitals.com",
-      delay: 0.2
     }
   ];
 

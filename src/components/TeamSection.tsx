@@ -14,7 +14,12 @@ const TeamSection = () => {
       description: "Trusted by investors worldwide"
     },
     {
-      number: "36%",
+      number: (
+        <span>
+          <span className="text-3xl">Up to </span>
+          <span>36%</span>
+        </span>
+      ),
       label: "Maximum ROI",
       description: "Exceptional returns across our portfolio"
     }
@@ -79,9 +84,9 @@ const TeamSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                className="flex items-center justify-center p-4 bg-gradient-card rounded-xl"
+                className="flex items-center justify-center p-8 bg-gradient-card rounded-xl"
               >
-                <span className="text-sm font-medium text-center">{feature}</span>
+                <span className="text-base font-medium text-center">{feature}</span>
               </motion.div>
             ))}
           </div>

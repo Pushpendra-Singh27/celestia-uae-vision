@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import abuDhabiImage from '@/assets/abu-dhabi-seascape-with-skyscrapers.jpg';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,7 +12,7 @@ import 'swiper/css/effect-fade';
 // Sample background images (replace with your actual images)
 const backgroundImages = [
   'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-  'https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+  abuDhabiImage,
   'https://images.unsplash.com/photo-1538964173425-93884d739596?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
 ];
 

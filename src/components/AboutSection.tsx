@@ -3,6 +3,7 @@ import { motion, useAnimation, useInView, useScroll, useTransform, Variants, Eas
 import { useInView as useIntersectionObserver } from 'react-intersection-observer';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
+import localImage from '@/assets/image.png';
 
 const AboutSection = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const AboutSection = () => {
 
   const aboutImages = [
     'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
-    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+    localImage,
     'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1484&q=80'
   ];
 
