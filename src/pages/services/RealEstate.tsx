@@ -4,30 +4,18 @@ import { Link } from 'react-router-dom';
 import AnimatedNavigation from '@/components/AnimatedNavigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
+import PageHero from '@/components/PageHero';
 
 const RealEstate = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <AnimatedNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-luxury bg-clip-text text-transparent">
-              Real Estate Investments
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Invest in premium commercial and residential properties with strong rental yields and capital appreciation
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Real Estate"
+        title="Real Estate Investments"
+        subtitle="Invest in premium commercial and residential properties with strong rental yields and capital appreciation"
+      />
 
       {/* Investment Overview */}
       <section className="py-20 px-6">
@@ -48,7 +36,7 @@ const RealEstate = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between border-b border-border pb-2">
                     <span className="font-semibold">Minimum Investment:</span>
-                    <span className="text-primary">AED 12M</span>
+                    <span className="text-primary">AED 2M</span>
                   </div>
                   <div className="flex justify-between border-b border-border pb-2">
                     <span className="font-semibold">Minimum Period:</span>

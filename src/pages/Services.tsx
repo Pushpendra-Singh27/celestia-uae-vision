@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { AnimatedImage3D } from '@/components/ui/AnimatedImage3D';
 import aviationImage from '@/assets/aviation-investment.jpg';
 import commodityImage from '@/assets/commodity-trading.jpg';
+import PageHero from '@/components/PageHero';
 
 const Services = () => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const Services = () => {
       overlayImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80',
       description: 'Earn from aircraft leasing, aviation operations, and logistics infrastructure—an exclusive, fast-growing sector.',
       roi: 'Up to 28% ROI',
-      minInvestment: 'AED 12M',
+      minInvestment: 'AED 2M / AED 12M',
       minPeriod: '5 years',
       route: '/services/aviation'
     },
@@ -52,27 +53,11 @@ const Services = () => {
     <div className="min-h-screen bg-background text-foreground">
       <AnimatedNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
-            }}
-            viewport={{ once: true, margin: '-100px 0px' }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-luxury bg-clip-text text-transparent">
-              Investment Services
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
-              Explore our exclusive investment opportunities across various high-growth sectors
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Our Services"
+        title="Investment Services"
+        subtitle="Explore our exclusive investment opportunities across various high-growth sectors"
+      />
 
       {/* Services Grid */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">

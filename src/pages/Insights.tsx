@@ -6,13 +6,14 @@ import Footer from '@/components/Footer';
 import { AnimatedImage3D } from '@/components/ui/AnimatedImage3D';
 import aviationImage from '@/assets/aviation-investment.jpg';
 import commodityImage from '@/assets/commodity-trading.jpg';
+import PageHero from '@/components/PageHero';
 
 const Insights = () => {
   const insights = [
     {
       id: 'aviation',
       title: 'Aviation Investment',
-      icon: '✈️',
+      icon: '🛫',
       image: aviationImage,
       description: 'Aviation investing can mean different things: buying aircraft for charter/leasing, investing in aviation businesses (e.g. MRO, airlines), or fractional jet ownership.',
       keyConsiderations: [
@@ -26,7 +27,7 @@ const Insights = () => {
     {
       id: 'realestate',
       title: 'Real Estate Investment',
-      icon: '🏢',
+      icon: '🏙️',
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       keyConsiderations: [
         'Tangible asset with intrinsic value.',
@@ -43,7 +44,7 @@ const Insights = () => {
     {
       id: 'commodity',
       title: 'Commodity Trading',
-      icon: '📈',
+      icon: '📊',
       image: commodityImage,
       description: 'This includes trading futures contracts or physical commodities like gold, oil, grains, etc.',
       keyConsiderations: [
@@ -62,23 +63,11 @@ const Insights = () => {
     <div className="min-h-screen bg-background text-foreground">
       <AnimatedNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-luxury bg-clip-text text-transparent">
-              Market Insights
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
-              Comprehensive analysis and key considerations for our investment sectors
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Insights"
+        title="Market Insights"
+        subtitle="Comprehensive analysis and key considerations for our investment sectors"
+      />
 
       {/* Insights Grid */}
       <section className="py-20 px-6">
@@ -97,9 +86,21 @@ const Insights = () => {
               {/* Content */}
               <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-luxury rounded-2xl flex items-center justify-center text-3xl">
+                  <motion.div
+                    className="w-16 h-16 bg-gradient-luxury rounded-2xl flex items-center justify-center text-3xl shadow-lg shadow-primary/30"
+                    animate={{
+                      y: [0, -4, 0],
+                      rotate: [0, -3, 3, 0]
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                      delay: index * 0.3
+                    }}
+                  >
                     {insight.icon}
-                  </div>
+                  </motion.div>
                   <h2 className="text-3xl md:text-4xl font-bold text-primary">
                     {insight.title}
                   </h2>
@@ -199,7 +200,7 @@ const Insights = () => {
                 riskLevel: 'Medium-High',
                 timeHorizon: '5+ Years',
                 liquidity: 'Low-Medium',
-                minInvestment: 'AED 12M',
+                minInvestment: 'AED 2M / AED 12M',
                 expectedROI: 'Up to 28%'
               },
               {
@@ -207,7 +208,7 @@ const Insights = () => {
                 riskLevel: 'Medium',
                 timeHorizon: '5+ Years',
                 liquidity: 'Low',
-                minInvestment: 'AED 12M',
+                minInvestment: 'AED 2M',
                 expectedROI: 'Up to 22%'
               },
               {

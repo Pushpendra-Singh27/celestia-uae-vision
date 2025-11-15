@@ -4,30 +4,18 @@ import { Link } from 'react-router-dom';
 import AnimatedNavigation from '@/components/AnimatedNavigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
+import PageHero from '@/components/PageHero';
 
 const Commodity = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <AnimatedNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-luxury bg-clip-text text-transparent">
-              Commodity Trading
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Diversify with gold, oil, and high-demand global commodities. A powerful hedge against inflation and market volatility
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Commodities"
+        title="Commodity Trading"
+        subtitle="Diversify with gold, oil, and high-demand global commodities. A powerful hedge against inflation and market volatility"
+      />
 
       {/* Investment Overview */}
       <section className="py-20 px-6">
@@ -57,10 +45,6 @@ const Commodity = () => {
                   <div className="flex justify-between border-b border-border pb-2">
                     <span className="font-semibold">Expected ROI:</span>
                     <span className="text-primary">Up to 36% annually</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-semibold">Bonus After Period:</span>
-                    <span className="text-primary">Up to 6%</span>
                   </div>
                 </div>
               </div>

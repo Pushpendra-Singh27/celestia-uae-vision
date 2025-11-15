@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import celestiaLogo from '@/assets/Celestia Capital Logo.png';
+import celestiaLogo from '@/assets/Logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -71,25 +71,6 @@ const Footer = () => {
               and Commodities. Building wealth through professional investment management 
               and exceptional returns.
             </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex space-x-4"
-            >
-              {['linkedin', 'twitter', 'facebook', 'instagram'].map((social, index) => (
-                <motion.button
-                  key={social}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="w-10 h-10 bg-muted/30 hover:bg-primary/20 rounded-lg flex items-center justify-center transition-all duration-300 border border-primary/20 hover:border-primary/40"
-                >
-                  <span className="sr-only">{social}</span>
-                  <div className="w-5 h-5 bg-primary/60 rounded-sm" />
-                </motion.button>
-              ))}
-            </motion.div>
           </div>
 
           {/* Links Sections */}

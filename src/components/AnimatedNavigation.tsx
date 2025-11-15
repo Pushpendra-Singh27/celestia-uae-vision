@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import celestiaLogo from '@/assets/Celestia Capital Logo.png';
+import celestiaLogo from '@/assets/Logo.png';
 
 interface AnimatedNavigationProps {
   useWhiteText?: boolean;

@@ -6,29 +6,18 @@ import Footer from '@/components/Footer';
 import { AnimatedImage3D } from '@/components/ui/AnimatedImage3D';
 import businessMeetingImage from '@/assets/3d-rendering-business-meeting-working-room-office-building.jpg';
 import businessmanChartImage from '@/assets/businessman-explaining-chart.jpg';
+import PageHero from '@/components/PageHero';
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <AnimatedNavigation />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-luxury bg-clip-text text-transparent">
-              Contact Us
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Ready to start your investment journey? Get in touch with our expert advisors
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Contact"
+        title="Contact Us"
+        subtitle="Ready to start your investment journey? Get in touch with our expert advisors"
+      />
 
       {/* Office Images Section */}
       <section className="py-20 px-6">
@@ -68,7 +57,7 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">Our Office</h3>
               <p className="text-muted-foreground">
-                Business Bay, Dubai<br />
+                Bank Street Building - Khalid Bin Al Waleed Rd - Al Hamriya - Dubai<br />
                 United Arab Emirates
               </p>
             </motion.div>
@@ -84,7 +73,7 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">Phone</h3>
               <p className="text-muted-foreground">
-                +971 XX XXX XXXX<br />
+                +91 77158 41612<br />
                 Available 24/7
               </p>
             </motion.div>

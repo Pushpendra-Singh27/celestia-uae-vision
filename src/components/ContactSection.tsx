@@ -20,8 +20,8 @@ const ContactSection = () => {
   const contactInfo = [
     {
       title: "Dubai Office",
-      address: "Business Bay, Dubai, UAE",
-      phone: "+971 4 XXX XXXX",
+      address: "Bank Street Building - Khalid Bin Al Waleed Rd - Al Hamriya - Dubai - United Arab Emirates",
+      phone: "+91 77158 41612",
       email: "invest@celestiacapitals.com",
       delay: 0
     }
